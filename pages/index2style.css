@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hopeful Paws - Adopt a Friend Today!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Hopeful Paws</h1>
+            <p>Stray Animal Adoption Agency & Clinic</p>
+            <a href="tel:555-123-4567" class="emergency">Emergency? Call: 555-123-4567</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Find your furever friend!</h2>
+            <div class="card-container">
+                <div class="card dog">
+                    <img src="images/dog.jpg" alt="Happy dog picture">
+                    <h3>Adopt a Dog</h3>
+                    <p>Loyal companions waiting for their forever homes.</p>
+                    <a href="adoption-process.html">Learn More</a>
+                </div>
+                <div class="card cat">
+                    <img src="images/cat.jpg" alt="Happy cat picture">
+                    <h3>Adopt a Cat</h3>
+                    <p>Purrfect cuddle buddies seeking loving families.</p>
+                    <a href="adoption-process.html">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="about">
+            <h2>About Us</h2>
+            <p>Hopeful Paws is a non-profit organization dedicated to rescuing stray animals, providing them with medical care, and finding them loving forever homes. We believe every animal deserves a second chance.</p>
+            <a href="about-us.html">Read More</a>
+        </section>
+
+        <section class="resources">
+            <h2>Educational Resources</h2>
+            <ul>
+                <li><a href="#">Pet Care Tips</a></li>
+                <li><a href="#">Signs of Animal Distress</a></li>
+                <li><a href="#">Responsible Pet Ownership</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; Hopeful Paws 2024</p>
+            <ul class="social-media">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit-code.js" crossorigin="anonymous"></script>
+</body>
+</html>

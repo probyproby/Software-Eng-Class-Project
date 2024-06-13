@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me</title>
+  <style>
+    /* Basic styles */
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/back3.jpeg);
+      background-size: cover;
+      object-fit: cover;
+      padding-left: 8%;
+      padding-right: 8%;
+      box-sizing: border-box;
+    }
+
+    /* Contact Form Styles */
+    .contact-form {
+      padding: 30px;
+      border-radius: 10px;
+      background-color: #fff;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .contact-form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .contact-form textarea {
+      height: 120px;
+    }
+
+    .contact-form button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .contact-form button:hover {
+      background-color: #45a049;
+    }
+
+    .whiteheader {
+      text-align: center;
+      color: white;
+    }
+
+    /* Social Media Icons */
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .social-icons a {
+      margin: 0 10px; 
+      text-decoration: none; 
+      color: inherit; 
+    }
+
+    .social-icons a:hover {
+      opacity: 0.7; 
+    }
+
+    .fa-whatsapp {
+      color: #25D366; 
+    }
+
+    .fa-instagram {
+      color: #8a3ab9;
+    }
+
+    .fa-facebook {
+      color: #3B5998; 
+    }
+
+    .fa-envelope {
+      color: RGB(234, 67, 45); 
+    }
+
+    img {
+        /*top: 5px;*/
+        width: 70px;
+        max-width: 70px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="whiteheader">Get In Touch</h1>
+    <div class="contact-form">
+      <h2>Contact Form</h2>
+      <form action="your_form_submission_script.php" method="post">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Write your message here"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+    <div class="social-icons">
+      <a href="https://wa.me/your_whatsapp_number" target="_blank"> <i class="fa fa-whatsapp"></i>
+        <img src="images/whatsapp.png" alt="Instagram">
+      </a>
+      <a href="https://www.instagram.com/your_instagram_profile" target="_blank"> <i class="fa fa-instagram"></i>
+        <img src="images/instagram.png" alt="Instagram">
+      </a>
+      <a href="https://www.facebook.com/your_facebook_profile" target="_blank"> <i class="fa fa-facebook"></i>
+        <img src="images/facebook.png" alt="Instagram">
+      </a>
+      <a href="mailto:youremail@example.com"> <i class="fa fa-envelope"></i>
+        <img src="images/gmail2bigger.png" alt="Instagram">
+      </a>
+    </div>
+  </div>
+</body>
+</html>
+
+
+

@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stray Animal - Adopt a Friend Today!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-image: linear-gradient(to right, #f7f7f7, #dfe4ea); 
+            padding: 20px 0; 
+            text-align: center; 
+            font-family: Times;
+          }
+          
+          /*.container {
+            display: flex;
+            justify-content: space-between; 
+            align-items: center; 
+            max-width: 1000px; 
+            margin: 0 auto; 
+          }*/
+
+          .container {
+            width: 80%; /* Adjust as needed (e.g., 70% or 90%) */
+            margin: 0 auto;
+        }
+        
+
+          .container img{
+            width: 90px;
+            height: 90px;
+          }
+          
+          .contact-info {
+            background-color: #f5f5f5; 
+            padding: 50px 0; 
+          }
+          
+          .container {
+            display: flex; 
+            justify-content: space-between; 
+            width: 80%; 
+            margin: 0 auto; 
+          }
+          
+          .contact-details, .map-container {
+            flex: 1; 
+            padding: 20px; 
+            border-radius: 5px; 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+            margin-bottom: 20px; 
+          }
+          
+          .contact-details h2, .map-container h2 {
+            margin-bottom: 15px; 
+            font-size: 1.8em; 
+            color: #333; 
+          }
+          
+          .contact-details p, .map-container p {
+            color: #333; 
+            line-height: 1.5; 
+          }
+          
+          .contact-details .social-media {
+            margin-top: 15px; 
+          }
+          
+          .contact-details .social-media a {
+            display: inline-block; 
+            margin-right: 10px; 
+            font-size: 1.2em; 
+            color: inherit; 
+          }
+          
+          .map-container iframe {
+            width: 100%; 
+            border: none; 
+          }
+          
+          h1 {
+            font-family: 'Raleway', sans-serif; 
+            font-weight: 700;
+            font-size: 2.5em;  
+            margin: 0; 
+            color: #333; 
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); 
+          }
+          
+          p {
+            font-size: 1.1em; 
+            color: rgba(0, 0, 0, 0.5); 
+            margin: 0 10px; 
+          }
+          
+          .emergency {
+            background-color: #e74c3c; 
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none; 
+            transition: background-color 0.3s ease-in-out;
+            margin-top: 3.5rem;
+          }
+          
+          .emergency:hover {
+            background-color: #c0392b; /* Darken red on hover */
+          }
+          
+        
+        /*h1 {
+            font-size: 2em;
+            margin-bottom: 5px;
+        }
+        
+        p {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+      /*h1 
+          font-size: 2em; /* Adjust as needed *
+      }
+      
+      p {
+          font-size: 1em; /* Adjust as needed *
+      }*/
+      
+        
+        .emergency {
+            background-color: red;
+            color: white;
+            margin-bottom: 20px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            float: right;
+        }
+
+   /* New code for search bar */
+header form {
+  display: flex;
+  justify-content: center; /* Centers the content within the header */
+  align-items: center;  /* Aligns content vertically in the center */
+}
+
+header input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px; /* Rounded left corners */
+  width: /*100%*/ 30em; /* Expands to fill available space */
+  margin-right: 10px; /* Adds a margin to the right */
+}
+
+header button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0; /* Rounded right corners */
+}
+
+/* User actions (assuming it's within the header form) */
+.user-actions {
+  display: inline-block;
+  margin-left: 10px; /* Optional margin adjustment for spacing */
+}
+
+.user-actions a {
+  text-decoration: none;
+  color: #000;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 1px;
+  display: flex; /* Allow aligning icon and text */
+  align-items: center; /* Center icon and text vertically */
+}
+
+.user-actions a i {
+  margin-left: 5px;
+}
+
+.user-actions ul.dropdown {
+  position: absolute; /* Position the dropdown menu */
+  top: 100%; /* Display below the button */
+  left: 0; /* Align to the left of the button */
+  background-color: #333;
+  list-style: none; /* Remove default bullet points */
+  padding: 0;
+  border-radius: 3px; /* Match the button style */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  display: none; /* Hide initially */
+}
+
+.user-actions:hover ul.dropdown {
+  display: block; /* Show dropdown on hover */
+}
+
+.user-actions ul.dropdown li {
+  padding: 5px 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.user-actions ul.dropdown li a:hover {
+  background-color: #eee; /* Highlight on hover */
+}
+
+.user-actions img {
+  width: 50px;
+  height: 50px;
+}
+
+        
+        main {
+            padding-bottom: 50px;
+        }
+        
+        .hero {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        h2 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        
+
+      .card-container {
+        display: flex;
+        justify-content: space-around;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/back2.jpeg');
+        background-size: cover;
+        object-fit: cover;
+        padding: 50px 0; /* Adjust padding if needed */
+        box-sizing: border-box;
+      }
+
+      .card {
+        width: 30%; /* Adjust card width based on desired layout */
+        background-color: #fff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        margin-bottom: 30px;
+        overflow: hidden;
+        transition: transform 0.3s ease-in-out;
+      }
+          
+          .card:hover {
+            transform: scale(1.03); 
+          }
+          
+          /*.dog img, .cat img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+          }*/
+          .dog img, .cat img {
+            width: 100%;
+            height: auto;
+        }
+        
+          
+          .card h3 {
+            padding: 15px 0; 
+            font-size: 1.8em;
+            margin: 0;
+            color: #333; 
+          }
+          
+          .card p {
+            padding: 0 15px 15px; 
+            font-size: 1em; 
+            line-height: 1.5; 
+            color: rgba(0, 0, 0, 0.2); 
+          }
+          
+          .card a {
+            display: block;
+            background-color: #007bff;
+            color: white;
+            padding: 12px 20px; 
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold; 
+            transition: background-color 0.3s ease-in-out;
+          }
+          
+          .card a:hover {
+            background-color: #0062cc;
+          }
+          
+        .about {
+            text-align: center; 
+            padding: 50px; 
+            background: linear-gradient(to right, #f7f7f7, #dfe4ea); 
+            color: #333; 
+          }
+          
+          .about h2 {
+            margin-bottom: 20px; 
+          }
+          
+          .about a {
+            display: inline-block; 
+            padding: 10px 20px;
+            background-color: #007bff; 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            transition: background-color 0.3s ease-in-out; 
+          }
+          
+          .about a:hover {
+            background-color: #0062cc; 
+          }
+          
+
+        /* Social Media Icons 
+        .footer .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+          }
+          
+          .footer .social-icons a {
+            margin: 0 15px; 
+            text-decoration: none;
+            color: inherit;
+            font-size: 1.2em; 
+          }
+          
+          .footer .social-icons a:hover {
+            opacity: 0.8; 
+            transform: scale(1.1); 
+            transition: transform 0.3s ease-in-out; 
+          }
+          
+          .footer .social-icons i { 
+            font-size: 20px;
+          }
+          
+          .footer img {
+            width: 30px; 
+            max-width: 50px;
+            height: 30px; 
+            border-radius: 50%; 
+            align-items: center;
+            margin-right: 30px;
+            
+          }*/
+          
+      .resources {
+        text-align: center; 
+      }
+      
+      .small-card {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /*justify-content: center;
+        margin: 0 auto; 
+        width: fit-content; */
+        gap: 20px; /* spacing between cards */
+        max-width: 800px; /* adjust as needed */
+        border-radius: 10px;
+        padding: 25px;
+        height: 300px; /* adjust height */
+        width: 800px; /* adjust width */
+        left: 60%;
+      }
+      
+      /*.small-card {
+        /* Existing styles for small cards (width, height, etc.) *
+        margin: 10px; /* Add some margin between cards *
+      }*/
+      
+      
+      .small-card h5 {
+        line-height: 1.2; 
+      }
+      
+      .small-card p {
+        line-height: 1.5; 
+      }
+      
+      
+      .small-card {
+        width: 200px;
+        height: 230px;
+        display: inline-block;
+        border-radius: 10px;
+        padding: 15px 20px;
+        box-sizing: border-box;
+        cursor: pointer;
+        margin-top: 29px;
+        margin: 10px 30px;
+        background-position: center;
+        background-size: cover;
+        transition: 0.7s;
+        filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.6));
+        flex-direction: row; 
+        justify-content: flex-end; 
+        align-items: center; 
+        padding-bottom: 20px; 
+      }
+      
+      .small-card h5,
+        .small-card p {
+        text-align: bottom, center; 
+        }
+
+      .small-card:hover {
+        transform: translateY(-10px);
+      }
+      
+      .c1 {
+        background-image: url(images/petowner.jpg);
+      }
+      
+      .c2 {
+        background-image: url(images/petcare.jpg);
+      }
+      
+      .c3 {
+        background-image: url(images/animaldis.webp);
+      }
+
+      .social-media {
+        display: inline-block;
+        filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.6));
+        width: 200px;
+        height: 70px;
+        transition: 0.7s;
+    }
+
+
+      .social-media a {
+        text-decoration: none;
+        color: black;
+    }
+    .social-media ion-icon{
+        color: black;
+        font-size: 30px;
+        padding-left: 14px;
+        padding-top: 5px;
+        transition: 0.3s ease;
+    }
+
+    .social-media ion-icon:hover {
+        color: #0062cc;
+    }
+
+      
+    footer {
+        padding: 20px 0;
+        text-align: center;
+        background: url("images/back2.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: transparent;
+
+      }
+  
+      footer p {
+        margin: 0;
+        color: black;
+        font-size: 1em;
+      }
+      
+   
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+          <img src="images/logofinal.png" alt="Save Animals" style="margin-right: 20px;" /> <h1>Stray Animal</h1> <p>Stray Animal Adoption Agency & Clinic</p>
+          <div class="emergency-wrapper">
+            <a href="tel:90-212-2513768" class="emergency">Emergency? Call: 90-212-2513768</a>
+          </div>
+        </div>
+        <div class="container">
+          <form action="#">  <input type="text" name="search" placeholder="Search">
+            <button type="submit">Search</button>
+            
+            <div class="user-actions">
+              <a href="login.html" title="Login/Sign Up">
+                <img src="images/addusericon.png" alt="Sign-Up/Log-In" style="margin-right: 20px;" />
+              <ul class="dropdown">
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+              </ul>
+            </div>
+      </form>
+    </div>
+  </header>
+          </form>
+        </div>
+      </header>
+      
+
+    <main>
+        <section class="hero">
+            <h2>Find your forever friend!</h2>
+            <div class="card-container">
+                <div class="card dog">
+                    <img src="images/dogs.jpg" alt="Happy dog picture">
+                    <h3>Adopt a Dog</h3>
+                    <p>Loyal companions waiting for their forever homes.</p>
+                    <a href="adopt2.html">Learn More</a>
+                </div>
+                <div class="card cat">
+                    <img src="images/cat.jpg" alt="Happy cat picture">
+                    <h3>Adopt a Cat</h3>
+                    <p>Purrfect cuddle buddies seeking loving families and a home.</p>
+                    <a href="adopt2.html">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="about">
+            <h2>About Us</h2>
+            <p>Stray Animal is a non-profit organization dedicated to rescuing stray animals, providing them with medical care, and finding them loving forever homes. <br> We believe every animal deserves a second chance.</p>
+            <a href="about.html">Read More</a>
+        </section>
+
+        <section class="resources">
+            <h2>Educational Resources</h2>
+            <div class="column2">
+                <div class="small-card c1">
+                  <h5>Responsible Pet Ownership</h5>
+                  <a href="https://www.barnesandnoble.com/w/puppy-brain-kerry-nichols/1144298319;jsessionid=511C226522C08C401F8523903AD87195.prodny_store02-atgap02?ean=9781250867919">Responsibilty</a>
+                </div>
+      
+                <div class="small-card c2">
+                  <h5>Pet Care Tips</h5>
+                  <a href="https://www.barnesandnoble.com/w/cats-of-the-world-hannah-shaw/1144450653;jsessionid=511C226522C08C401F8523903AD87195.prodny_store02-atgap02?ean=9780593183113">Care Tips</a>
+                </div>
+    
+                <div class="small-card c3">
+                  <h5>Signs of Animal Distress</h5>
+                  <a href="https://www.barnesandnoble.com/w/recognition-and-alleviation-of-distress-in-laboratory-animals-national-research-council/1128095482?ean=9780309108171">animal Distress</a>
+                </div>
+        </section>
+
+        <section class="contact-info">
+            <div class="container">
+              <div class="contact-details">
+                <h2>Contact Us</h2>
+                <p>Phone: (90) 212-2513768</p>
+                <p>Email: <a href="mailto:youremail@example.com">savestraysinfo@gmail.com</a></p>
+                <p>Address: Eul Street, Lefke, CY LAU-Campus</p>
+                <div class="social-media">
+                  <!--<a href="https://wa.me/your_whatsapp_number" target="_blank">
+                    <i class="fa fa-whatsapp"></i>
+                    <img src="images/whatsapp.png" alt="whatsApp">
+                  </a>
+                  <a href="https://www.facebook.com/your_facebook_profile" target="_blank">
+                    <i class="fa fa-facebook"></i>
+                    <img src="images/facebook.png" alt="facebook">
+                  </a>
+                  <a href="https://www.instagram.com/your_instagram_profile" target="_blank">
+                    <i class="fa fa-instagram"></i>
+                    <img src="images/instagram.png" alt="Instagram">
+                  </a>-->
+                  <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                 <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+                </div>
+              </div>
+              <div class="map-container">
+                <h2>Find Our Clinic</h2>
+                <iframe src="https://www.bing.com/search?q=european+university+of+lefke+location+link&cvid=84011928fac74b52934297858d4b2db9&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQLhhAMgYIAhAAGEAyBggDEAAYQDIGCAQQABhAMgYIBRAAGEAyBggGEAAYQDIGCAcQABhAMgYICBAAGEDSAQkxNjY5NmowajioAgCwAgA&FORM=ANNTA0&adppc=EDGEBRV&PC=SCOOBE#" width="600" height="400" frameborder="0" style="border:0;" allowfullscreen></iframe>
+              </div>
+            </div>
+          </section>
+          <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    </main>
+    <footer>
+      <p>Copyright &copy; StrayAnimal-2024. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

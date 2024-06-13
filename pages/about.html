@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stray Animal Project - About Us</title>
+  <style>
+    /* Basic styles */
+    body {
+      font-family: Arial, sans-serif; /* Easy to read font */
+      margin: 0;
+      color: black; /* White text for all sections */
+      padding: 0;
+      line-height: 1.5; /* Improves readability */
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 30px;
+    }
+
+    .about-us-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .about-us-text {
+      flex: 1;
+      padding: 15px;
+    }
+
+    .about-us-text h2 {
+      margin-bottom: 10px;
+      font-size: 2rem; /* Larger font size for readability */
+    }
+
+    .about-us-text p {
+      font-size: 1.2rem; /* Larger font size for readability */
+    }
+
+    .about-us-image {
+      flex: 1;
+      padding: 15px;
+    }
+
+    .about-us-image img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+    }
+
+    /* Hero background image */
+    body {
+      background-image: url("images/subtle_pawprints.jpg"); /* Replace with your image */
+      background-repeat: repeat;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    /* Section backgrounds */
+    .hero {
+      background-color: rgba(0, 0, 0, 0.2
+      ); /* Semi-transparent black background for hero section */
+      padding: 50px;
+    }
+
+    .about-us {
+      background-color: #f5f5f5; /* Light gray background for About Us section */
+      padding: 20px;
+      margin-top: 30px;
+    }
+
+    .join-us {
+      background-color: gray; /* Dark gray background for Join Us section */
+      padding: 20px;
+      margin-top: 30px;
+      color: white;
+    }
+
+    .join-us .join-us-heading{
+      color: white;
+    }
+
+    .contact {
+      background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black background for Contact section */
+      padding: 20px;
+      margin-top: 30px;
+    }
+
+    @media only screen and (max-width: 768px) {
+      /* Responsive adjustments for smaller screens */
+      .about-us-content {
+        flex-direction: column;
+      }
+
+      .about-us-text,
+      .about-us-image {
+        order: unset;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="hero">
+    <h1>About the Stray Animal Project</h1>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <section class="about-us">
+        <div class="about-us-content">
+          <div class="about-us-text">
+            <h2>Our Mission: Every Animal Deserves a Home</h2>
+            <p>
+              The Stray Animal Project is a dedicated organization working tirelessly to improve the lives of stray animals in our community. We are a team of passionate individuals, including animal lovers, volunteers, and veterinary professionals, all united by a common goal: to create a world where every animal has a safe and loving home.
+            </p>
+            <p>
+              We believe that all animals deserve compassion, care, and a second chance. We are committed to rescuing stray animals, providing them with the medical attention they need, and finding them forever homes.
+            </p>
+          </div>
+
+          <div class="about-us-image">
+            <img src="images/happyadopteddog.jpeg" alt="Smiling dog adopted by a loving family">
+          </div>
+        </div>
+      </section>
+
+      <section class="how-we-help">
+        <h2>How We Make a Difference</h2>
+
+        <ul style="font-size: 1.2rem; list-style: disc; padding-left: 20px;">
+          <li>Rescue stray animals from neglectful or dangerous situations.</li>
+          <li>Provide veterinary care, including vaccinations, spaying/neutering, and treatment for any illnesses or injuries.</li>
+          <li>Offer temporary shelter and foster care in loving homes until permanent adoption is secured.</li>
+          <li>Educate the community about responsible pet ownership and the importance of spaying/neutering to reduce pet overpopulation.</li>
+          <li>Advocate for animal welfare and promote legislation for stronger animal protection laws.</li>
+        </ul>
+      </section>
+
+      <section class="join-us">
+        <h2 class="join-us-heading">Join Us in Making a Difference!</h2>
+
+        <div>
+          <p>
+            There are many ways you can join us in making a positive impact on the lives of stray animals:
+          </p>
+
+          <ul style="font-size: 1.2rem; list-style: disc; padding-left: 20px;">
+            <li>**Adopt a furry friend!** Give a deserving animal a loving home. Browse our heartwarming adoption stories and find your perfect match!</li>
+            <li>**Become a foster parent!** Provide temporary care and socialization for an animal in need. Witness the transformation of a scared stray into a happy, adoptable pet!</li>
+            <li>**Volunteer your time!** Assist with animal care, fundraising events, or administrative tasks. Every contribution, big or small, makes a difference.</li>
+            <li>**Donate!** Your financial contributions help cover the costs of food, medical care, and shelter for the animals. Every dollar counts!</li>
+            <li>**Spread the word!** Raise awareness about our organization and the plight of stray animals. Share our stories and social media posts with your friends and family.</li>
+          </ul>
+
+          <p>
+            Together, we can create a brighter future for stray animals in our community. Watch our heartwarming video testimonials from successful adoptions and happy foster experiences to see the impact of your support!
+          </p>
+          <div style="text-align: center;">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" title="Stray Animal Project - Success Stories" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></emded>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact">
+        <h2>Stay Connected</h2>
+
+        <p>
+          Follow us on social media and subscribe to our newsletter to stay updated on our latest rescues, adoption events, and volunteer opportunities.
+        </p>
+
+        <div style="display: flex; justify-content: space-around;">
+          <a href="https://www.facebook.com/your_facebook_profile" target="_blank" aria-label="Facebook page">
+            <img src="images/facebook.png" alt="Facebook logo" style="width: 40px; height: 40px;">
+          </a>
+          <a href="https://www.instagram.com/your_instagram_profile" target="_blank" aria-label="Instagram page">
+            <img src="images/instagram.png" alt="Instagram logo" style="width: 40px; height: 40px;">
+          </a>
+          <a href="mailto:youremail@example.com" aria-label="Email us">
+            <img src="images/email.png" alt="Email icon" style="width: 40px; height: 40px;">
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>Copyright &copy; Stray Animal Project - 2024. All Rights Reserved.</p>
+  </footer>
+</body>
+
+</html>

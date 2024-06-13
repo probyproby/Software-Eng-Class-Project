@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strays - Animal </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="admin.js"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            /*background-size: cover;
+            object-fit: cover; /* Redundant with background-size: cover *
+            background-repeat: no-repeat;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7))/*, url('images/doggo.jpg')*;
+            height: 100%;
+            height: 100vh;
+            width: 100vw;
+            margin: 0;*/
+          }
+          
+          header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            font-weight: bold;
+            font-family: Times;
+          }
+          
+          header h1 {
+            font-size: 2em;
+            margin-bottom: 0;
+          }
+          
+          nav {
+            background-color: #f0f0f0;
+            padding: 1rem;
+          }
+          
+          nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex; /* Make navigation horizontal */
+            justify-content: space-between; /* Distribute links evenly */
+          }
+          
+          nav li {
+            margin-right: 1rem;
+          }
+          
+          nav a {
+            color: black;
+            text-decoration: none;
+          }
+          
+          nav a:hover {
+            text-decoration: underline;
+          }
+          
+          main {
+            padding: 1rem;
+          }
+          
+          section {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px; /* Add rounded corners */
+          }
+          
+          section h2 {
+            margin-bottom: 1rem;
+          }
+          
+          #animal-search {
+            width: 100%; /* Make search bar full width */
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 3px; /* Add rounded corners */
+          }
+          
+          .social-media {
+            display: flex;
+            filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.6));
+            transition: 0.7s;
+            justify-content: space-between;
+            margin-top: 1rem;
+          }
+          
+          .social-media a {
+            color: black;
+            text-decoration: none;
+            /*margin-right: 1rem;*/
+          }
+
+         /* .icon{
+            width: 200px;
+            float: left;
+            height: 70px;
+        }*/
+          /*.icons a {
+            text-decoration: none;
+            color: #fff;
+        }*/
+        .social-media ion-icon{
+            color: black;
+            font-size: 30px;
+            padding-left: 14px;
+            padding-top: 5px;
+            margin-right: 1rem;
+            transition: 0.3s ease;
+            font-weight: bold;
+        }
+       
+    
+        .social-media ion-icon:hover {
+            color: #007bff;
+        }
+          
+          /*.social-media a:hover {
+            text-decoration: #c0392b;
+          }*/
+          
+          footer {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+          }
+          
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Strays Animal Project </h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#animals">Animals</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="adopt2.html">Adopt</a></li>
+            <li><a href="#completed">Completed Tasks</a></li>
+            <li><a href="#report">Reported Strays</a></li>
+            <li><a href="#donate">Donate</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="animals">
+            <h2>Animals</h2>
+            <p>Search for animals by name, status (sterilized/not sterilized), or location.</p>
+            <input type="text" id="animal-search" placeholder="Search Animals">
+            <div id="animal-list">
+                </div>
+        </section>
+        <section id="events">
+            <h2>Upcoming Events</h2>
+            <ul>
+                <li>Sterilization Drive - May 15th, 2024</li>
+                </ul>
+            <h2>Past Events</h2>
+            <ul>
+                <li>Vaccination Clinic - April 10th, 2024</li>
+                </ul>
+        </section>
+        <section id="adoptions">
+            <h2>Happy Tails!</h2>
+            <p>These wonderful animals have found their forever homes.</p>
+            <div id="adopted-list">
+                </div>
+        </section>
+        <section id="completed">
+            <h2>Completed Tasks</h2>
+            <p>View a list of completed tasks, including sterilization dates and workers involved.</p>
+            <div id="completed-tasks">
+                </div>
+        </section>
+        <section id="report">
+            <h2>Report a Stray Animal</h2>
+            <p>Help us track strays in  Fill out the form below.</p>
+            <form id="report-form">
+                <label for="location">Location:</label>
+                <input type="text" id="location" placeholder="Enter location details">
+                <label for="photo">Photo (optional):</label>
+                <input type="file" id="photo">
+                <button type="submit">Report Stray</button>
+            </form>
+        </section>
+        <section id="donate">
+            <h2>Help Strays</h2>
+            <p>Your donations help us care for stray animals. Donate now!</p>
+            <button id="donate-button">Donate</button>
+            <p>**OR**</p>
+            <p>Share our cause on social media!</p>
+            <div class="social-media">
+                <!--<a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>-->
+                <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                 <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+            </div>
+        </section>
+    </main>
+    <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <footer>
+        <p>&copy; Strays - Animal . All Rights Reserved.</p>
+    </footer>
+    <script src="admin.js"></script>
+</body>
+</html>
